@@ -409,10 +409,10 @@ Pick either one of them and follow the instructions on the website to install co
 <p>We recommend using miniconda since it is light-weighted, and you can avoid waiting for a long time to install many packages that may not be necessary.
 If you already have the conda environment ready on your machine, you can skip this step.</p>
 <p>For Mac users, you can also install miniconda using the <a class="reference external" href="https://brew.sh/">Homebrew</a> package manager:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>cask<span class="w"> </span>install<span class="w"> </span>miniconda
-<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;/usr/local/Caskroom/miniconda/base/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
-<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;. /usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
-<span class="nb">source</span><span class="w"> </span>~/.bash_profile
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew cask install miniconda
+<span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;/usr/local/Caskroom/miniconda/base/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nb">echo</span> <span class="s1">&#39;. /usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nb">source</span> ~/.bash_profile
 </pre></div>
 </div>
 </section>
@@ -420,40 +420,40 @@ If you already have the conda environment ready on your machine, you can skip th
 <h2>Step 2: Install Jupyter Book<a class="headerlink" href="#step-2-install-jupyter-book" title="Permalink to this heading">#</a></h2>
 <p><a name="s2"></a></p>
 <p>Now, create a new conda environment using the command below. We need to install Jupyter Book in the conda environment.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>jupyterbook
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda create -n jupyterbook
 </pre></div>
 </div>
 <p>After you have the environment ready, activate it.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>jupyterbook
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda activate jupyterbook
 </pre></div>
 </div>
 <p>Then, install Python in the environment. You need to be careful here if you are using Windows.
 According to <a class="reference external" href="https://jupyterbook.org/en/stable/advanced/windows.html#working-on-windows">the documentation</a>, Python 3.8 has some problems when being used for building Jupyter Book.
 So, if you are a Windows user, install Python 3.7 specifically instead.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># For Mac and Linux users</span>
-conda<span class="w"> </span>install<span class="w"> </span>python
+conda install python
 
 <span class="c1"># For Windows users</span>
-conda<span class="w"> </span>install<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+conda install <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
 </pre></div>
 </div>
 <p>Next, install <code class="docutils literal notranslate"><span class="pre">pip</span></code> and check if the path of <code class="docutils literal notranslate"><span class="pre">pip</span></code> is correct.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>pip
-which<span class="w"> </span>pip<span class="w"> </span><span class="c1"># make sure this is the pip inside the jupyterbook environment, which means the path should contains the &quot;jupyterbook&quot; string</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda install pip
+which pip <span class="c1"># make sure this is the pip inside the jupyterbook environment, which means the path should contains the &quot;jupyterbook&quot; string</span>
 </pre></div>
 </div>
 <p>Finally, install the packages that are needed for building and compiling notebooks.
 Notice that for Windows users, you may encounter errors later when building the book if using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> to install Jupyter Book, so please use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> instead.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># For Mac and Linux users</span>
-pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>jupyter-book
+pip install -U jupyter-book
 
 <span class="c1"># For Windows users</span>
-conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyter-book
+conda install -c conda-forge jupyter-book
 </pre></div>
 </div>
 <p>Check if Jupyter Book is installed correctly using the following command.
 Having no error messages means that Jupyter Book is installed correctly.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>--help
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book --help
 </pre></div>
 </div>
 </section>
@@ -462,15 +462,15 @@ Having no error messages means that Jupyter Book is installed correctly.</p>
 <p><a name="s3"></a></p>
 <p>Next, we need to create a new repository to host your website and code using this tutorial as the template.
 Clone our tutorial repository (which downloads the code to your local machine):</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yenchiah/jupyter-book-template
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/yenchiah/jupyter-book-template
 </pre></div>
 </div>
 <p>The cloned tutorial repository has the template files that you need to build your website.
 We are only using the template for reference.</p>
 <p>Next, go into the template folder and delete the old <code class="docutils literal notranslate"><span class="pre">git</span></code> history from the template since we do not need them.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>jupyter-book-template
-rm<span class="w"> </span>-rf<span class="w"> </span>.git
-<span class="nb">cd</span><span class="w"> </span>..
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> jupyter-book-template
+rm -rf .git
+<span class="nb">cd</span> ..
 </pre></div>
 </div>
 <p>To have your repository that can host your website and code, <a class="reference external" href="https://github.com/new">create a new repository</a> and work from there.
@@ -478,12 +478,12 @@ Make sure that your repository is public, and do not add a README file.
 You also do not need to add the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file and <code class="docutils literal notranslate"><span class="pre">license</span></code>.</p>
 <p>Then, clone your newly created (and currently empty) repository to your local machine.
 Remember to use the proper account (i.e., replacing <code class="docutils literal notranslate"><span class="pre">[my-account-name]</span></code>) and repository name (i.e., replacing <code class="docutils literal notranslate"><span class="pre">[my-repository-name]</span></code>) in the URL that you want to clone.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/<span class="o">[</span>my-account-name<span class="o">]</span>/<span class="o">[</span>my-repository-name<span class="o">]</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/<span class="o">[</span>my-account-name<span class="o">]</span>/<span class="o">[</span>my-repository-name<span class="o">]</span>
 </pre></div>
 </div>
 <p>Now, copy all the template files and folders from the tutorial repository to this newly created repository.
 Again, remember to use the correct repository name (i.e., replacing <code class="docutils literal notranslate"><span class="pre">[my-repository-name]</span></code>).</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>jupyter-book-template/*<span class="w"> </span><span class="o">[</span>my-repository-name<span class="o">]</span>/
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cp -r jupyter-book-template/* <span class="o">[</span>my-repository-name<span class="o">]</span>/
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -497,22 +497,22 @@ Otherwise, you will fail to copy the hidden files, such as the <code class="docu
 <p><a name="s4"></a></p>
 <p>Now we are going to compile and build your book on your local machine.
 Inside your conda environment, we need to install some required Python packages:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>numpy
-pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>plotly
-pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pandas
-pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>matplotlib
-pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>seaborn
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install -U numpy
+pip install -U plotly
+pip install -U pandas
+pip install -U matplotlib
+pip install -U seaborn
 </pre></div>
 </div>
 <p>To build the book, run the following command.
 Remember that you must go to the repository folder  (i.e., replacing <code class="docutils literal notranslate"><span class="pre">[my-repository-name]</span></code>) that you just cloned.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>my-repository-name<span class="o">]</span>
-jupyter-book<span class="w"> </span>build<span class="w"> </span>.
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="o">[</span>my-repository-name<span class="o">]</span>
+jupyter-book build .
 </pre></div>
 </div>
 <p>The above command only builds the newly-updated files since the last time you built the book.
 Sometimes you may want to build the entire book from scratch, and you can use the following:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>--all<span class="w"> </span>.
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book build --all .
 </pre></div>
 </div>
 <p>After building the book, all the html files in the <code class="docutils literal notranslate"><span class="pre">_build/html/</span></code> directory will be updated.
@@ -532,24 +532,24 @@ For more information about how to edit them, check <a class="reference external"
 We will do this using the <a class="reference external" href="https://pages.github.com">GitHub Pages</a>.</p>
 <p>First, push your code and files on your local machine to your remote repository.
 Replace <code class="docutils literal notranslate"><span class="pre">[my-repository-name]</span></code> with your repository name.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>my-repository-name<span class="o">]</span>
-git<span class="w"> </span>add<span class="w"> </span>.
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add my first book!&quot;</span>
-git<span class="w"> </span>push
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="o">[</span>my-repository-name<span class="o">]</span>
+git add .
+git commit -m <span class="s2">&quot;Add my first book!&quot;</span>
+git push
 </pre></div>
 </div>
 <p>The above commands push your code to the main branch.
 However, we need to use the <a class="reference external" href="https://github.com/c-w/ghp-import">ghp-import</a> package to push your website code to a separate branch.
 To use the package, run the following to install it:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># For Mac and Linux users</span>
-pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>ghp-import
+pip install -U ghp-import
 
 <span class="c1"># For Windows users</span>
-conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>ghp-import
+conda install -c conda-forge ghp-import
 </pre></div>
 </div>
 <p>Then, run the following command to push your html files to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
 </pre></div>
 </div>
 <div class="admonition important">
