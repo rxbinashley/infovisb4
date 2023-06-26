@@ -1,0 +1,1817 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Correlation between Happiness and Economic Factors &#8212; Jupyter Book Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/draft';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="home.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jupyter Book Template</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="home.html">
+                    Jupyter Book Tutorial
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">Example Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/yenchiah/jupyter-book-template/blob/main/docs/docs/draft.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fdocs/draft.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/draft.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Correlation between Happiness and Economic Factors</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Correlation between Happiness and Economic Factors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectives">Perspectives</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets-and-preprocessing">Datasets and preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-world-happiness-report">Dataset 1: World happiness report</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-inflation-cpi">Dataset 2: Inflation (CPI)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-selection">Data selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection">Reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#work-distribution">Work distribution</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizations">Visualizations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#happiness-and-generosity-in-2020-vs-2022">Happiness and Generosity in 2020 vs 2022</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-is-inflation-higher-in-2022-than-in-2020-in-every-selected-country">Question: Is inflation higher in 2022 than in 2020 in every selected country?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-is-the-happiness-score-lower-in-2022-than-in-2020-every-selected-country">Question: Is the happiness score lower in 2022 than in 2020 every selected country?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#happiness-vs-inflation-in-different-countries">Happiness vs inflation in different countries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gdp-per-capita-and-happiness">GDP per Capita and Happiness:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-drafts">Visualization drafts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unemployment-rate-happiness-score-2020-vs-2022-draft">Unemployment rate, happiness score: 2020 vs 2022 (draft)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>20-06-2023</p>
+<p>Information Visualization: group project Draft</p>
+<p>Group: B4</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Student name</p></th>
+<th class="head"><p>student number</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Evan Lont</p></td>
+<td><p>14729210</p></td>
+</tr>
+<tr class="row-odd"><td><p>Joep Haanen</p></td>
+<td><p>14657368</p></td>
+</tr>
+<tr class="row-even"><td><p>Lotte te Kulve</p></td>
+<td><p>14648911</p></td>
+</tr>
+<tr class="row-odd"><td><p>Robin Kuipers</p></td>
+<td><p>14273810</p></td>
+</tr>
+</tbody>
+</table>
+<section class="tex2jax_ignore mathjax_ignore" id="correlation-between-happiness-and-economic-factors">
+<h1>Correlation between Happiness and Economic Factors<a class="headerlink" href="#correlation-between-happiness-and-economic-factors" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>Our data analysis will focus on exploring the correlation between happiness and economic factors. Using the “World Happiness Report” dataset and relevant economic indicators such as GDP per capita, inflation rates, and consumer price index (CPI), we will investigate the relationship between subjective well-being and economic stability. By analyzing the data, we aim to determine whether countries with higher economic indicators tend to exhibit higher happiness scores. This study will contribute to our understanding of how economic factors influence individual and societal levels of happiness.</p>
+<section id="perspectives">
+<h3>Perspectives<a class="headerlink" href="#perspectives" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Consumer Price Index (CPI) and Happiness: We want to examine the impact of
+CPI on happiness. We will argue that a higher CPI, reflecting increased prices of
+goods and services, could potentially reduce individuals’ satisfaction with their
+standard of living, impacting overall happiness levels.</p></li>
+<li><p>Inflation Rates and Happiness: We want to investigate the relationship between
+inflation rates and happiness. We will argue that high inflation rates may lead to
+increased uncertainty, economic instability, and decreased purchasing power,
+potentially negatively affecting happiness levels in a country.</p></li>
+<li><p>GDP per Capita and Happiness: We will explore the correlation between GDP per
+capita and happiness scores. We will argue that countries with higher GDP per
+capita may have better economic opportunities, access to resources, and quality of
+life, which could positively impact happiness levels.</p></li>
+</ol>
+</section>
+</section>
+<section id="datasets-and-preprocessing">
+<h2>Datasets and preprocessing<a class="headerlink" href="#datasets-and-preprocessing" title="Permalink to this heading">#</a></h2>
+<p>We decided to use the World Happiness Dataset from WHO. For our second dataset, we wanted to use a dataset about inflation trends from (at least) ten years ago up until 2022. We found an inflation dataset from OECD data that matched our requirements. We then analysed the two datasets and came to the conclusion that we needed a more comprehensive dataset for the happiness measurement, because it only contained data for the year 2019. To make accurate analyses, the dataset has to match the time periods of the other. Also, the inflation dataset can possibly give us interesting visualisations because of the inflation trends before, during and (somewhat) after the COVID-19 pandemic.</p>
+<section id="dataset-1-world-happiness-report">
+<h3>Dataset 1: World happiness report<a class="headerlink" href="#dataset-1-world-happiness-report" title="Permalink to this heading">#</a></h3>
+<p><strong>Source:</strong> <a class="reference external" href="https://worldhappiness.report/ed/2020/#appendices-and-data">https://worldhappiness.report/ed/2020/#appendices-and-data</a></p>
+<p><strong>Number of records:</strong> <code class="docutils literal notranslate"><span class="pre">20</span></code></p>
+<p><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Number of variables:</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong> <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
+<p><strong>Description:</strong> This dataset is from the Organization for Economic Cooperation and Development (OECD) and focuses on inflation, specifically the Consumer Price Index (CPI). The Consumer Price Index is a widely used measure of inflation, representing the average price change over time for a basket of goods and services commonly consumed by households.</p>
+<p>The dataset likely includes information about inflation rates for various countries and regions over a specific time period. It can provide insights into how prices of goods and services have changed over time, serving as an important indicator of economic stability and the purchasing power of consumers.</p>
+<p>By analyzing this dataset, we can gain a deeper understanding of inflation trends across different economies and regions. We could also compare the inflation rates of different countries to assess their economic performance, identify periods of high or low inflation, and study the potential impacts on various sectors such as investment, wages, and consumer spending.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Datatype</p></th>
+<th class="head"><p>Measurement scale</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>country name</p></td>
+<td><p>Categorical</p></td>
+<td><p>Nominal</p></td>
+</tr>
+<tr class="row-odd"><td><p>Regional indicator</p></td>
+<td><p>Categorical</p></td>
+<td><p>Nominal</p></td>
+</tr>
+<tr class="row-even"><td><p>Happiness score</p></td>
+<td><p>Continuous</p></td>
+<td><p>Interval</p></td>
+</tr>
+<tr class="row-odd"><td><p>upperwhisker</p></td>
+<td><p>Continuous</p></td>
+<td><p>Interval</p></td>
+</tr>
+<tr class="row-even"><td><p>lowerwhisker</p></td>
+<td><p>Continuous</p></td>
+<td><p>Interval</p></td>
+</tr>
+<tr class="row-odd"><td><p>Logged GDP per capita</p></td>
+<td><p>Continuous</p></td>
+<td><p>Ratio</p></td>
+</tr>
+<tr class="row-even"><td><p>Healthy life expectancy</p></td>
+<td><p>Continuous</p></td>
+<td><p>Interval</p></td>
+</tr>
+<tr class="row-odd"><td><p>Generosity</p></td>
+<td><p>Continuous</p></td>
+<td><p>Interval</p></td>
+</tr>
+<tr class="row-even"><td><p>Perceptions of corruption</p></td>
+<td><p>Continuous</p></td>
+<td><p>Interval</p></td>
+</tr>
+<tr class="row-odd"><td><p>Explained by: Log GDP per capita</p></td>
+<td><p>Continuous</p></td>
+<td><p>Ratio</p></td>
+</tr>
+<tr class="row-even"><td><p>Explained by: Healthy life expectancy</p></td>
+<td><p>Continuous</p></td>
+<td><p>Ratio</p></td>
+</tr>
+<tr class="row-odd"><td><p>Explained by: Freedom to make life choices</p></td>
+<td><p>Continuous</p></td>
+<td><p>Ratio</p></td>
+</tr>
+<tr class="row-even"><td><p>Explained by: Generosity</p></td>
+<td><p>Continuous</p></td>
+<td><p>Ratio</p></td>
+</tr>
+<tr class="row-odd"><td><p>Explained by: Social support</p></td>
+<td><p>Continuous</p></td>
+<td><p>Ratio</p></td>
+</tr>
+<tr class="row-even"><td><p>Explained by: Perceptions of corruption</p></td>
+<td><p>Continuous</p></td>
+<td><p>Ratio</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dystopia + residual</p></td>
+<td><p>Continuous</p></td>
+<td><p>Interval</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="dataset-2-inflation-cpi">
+<h3>Dataset 2: Inflation (CPI)<a class="headerlink" href="#dataset-2-inflation-cpi" title="Permalink to this heading">#</a></h3>
+<p><strong>Source:</strong> <a class="reference external" href="https://data.oecd.org/price/inflation-cpi.htm">https://data.oecd.org/price/inflation-cpi.htm</a></p>
+<p><strong>Number of records:</strong> <code class="docutils literal notranslate"><span class="pre">490</span></code></p>
+<p><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Number of variables:</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong> <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
+<p><strong>Description:</strong> The “Inflation (CPI)” dataset from the OECD contains information on consumer price index (CPI) and inflation rates across various countries. It provides a comprehensive view of the changes in price levels for goods and services over time, allowing for the analysis and comparison of inflation rates among different economies. The dataset includes indicators such as headline inflation, core inflation, and various sub-components of CPI. It serves as a valuable resource for understanding and monitoring inflation trends at a global level.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Datatype</p></th>
+<th class="head"><p>Measurement scale</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Location</p></td>
+<td><p>Categorical</p></td>
+<td><p>Nominal</p></td>
+</tr>
+<tr class="row-odd"><td><p>Regional indicator</p></td>
+<td><p>Categorical</p></td>
+<td><p>Nominal</p></td>
+</tr>
+<tr class="row-even"><td><p>Subject</p></td>
+<td><p>categorical</p></td>
+<td><p>Nominal</p></td>
+</tr>
+<tr class="row-odd"><td><p>Measure</p></td>
+<td><p>categorical</p></td>
+<td><p>Interval</p></td>
+</tr>
+<tr class="row-even"><td><p>Frequency</p></td>
+<td><p>Continuous</p></td>
+<td><p>Interval</p></td>
+</tr>
+<tr class="row-odd"><td><p>Time</p></td>
+<td><p>Continuous</p></td>
+<td><p>Interval</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
+<td><p>Continuous</p></td>
+<td><p>Interval</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flag code</p></td>
+<td><p>Categorical</p></td>
+<td><p>Nominal</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="data-selection">
+<h2>Data selection<a class="headerlink" href="#data-selection" title="Permalink to this heading">#</a></h2>
+<p>for each variable we asked ourselves the following questions:</p>
+<ul class="simple">
+<li><p>What are the variables in the data?</p></li>
+<li><p>Do we need all the data points and variables?</p></li>
+<li><p>Are there data that are out of scope?</p></li>
+<li><p>Are there privacy or ethical issues in the data?</p></li>
+<li><p>Is it practical to process the variable that we want?</p></li>
+</ul>
+<p>To prevent our dataset to be too large, we decided to analyse the data for the years 2020 and 2022, because both datasets’ values varied a lot in between these years. Another reason for the selection of only two different years is that we want to find out how much the data can differ in such a small timeframe.</p>
+<p>Based on the discussions we had, we:</p>
+<ul class="simple">
+<li><p>We removed the following columns from the world happiness dataset:</p>
+<ul>
+<li><p>Upperwhisker</p></li>
+<li><p>Lowerwhisker</p></li>
+<li><p>Standard error of ladder score</p></li>
+<li><p>Dystopia + residual</p></li>
+</ul>
+</li>
+<li><p>We rearranged columns so that we can easily see which country and year we’re looking at.</p></li>
+<li><p>We removed countries we didn’t need for our analysis and kept the following selection:</p></li>
+</ul>
+<p>‘Switzerland’, ‘Netherlands’, ‘New Zealand’, ‘Canada’,’Saudi Arabia’,
+‘Chile’, ‘Japan’, ‘Portugal’, ‘China’, ‘Vietnam’,’Nepal’, ‘South Africa’, ‘Ukraine’, ‘Morocco’, ‘Cameroon’, ‘Iran’,’Egypt’, ‘India’</p>
+<ul class="simple">
+<li><p>We changed country names to abbreviations
+Both datasets contained information per country, but the inflation dataset has abbreviations as values and the happiness dataset has the full country names. If we want to compare data for certain countries, we have to align these values to either abbreviations or full country names. We chose for abbreviations. By running the following code in a Jupyter Notebook:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inflation</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;inflation.csv&#39;</span><span class="p">)</span>
+<span class="n">happiness_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;happiness_2020-def.csv&#39;</span><span class="p">)</span>
+<span class="n">happiness_2022</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;happiness_2022-def.csv&#39;</span><span class="p">)</span>
+<span class="n">inflation</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Flag Codes&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">inflation</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;FREQUENCY&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">inflation</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;inflation.csv&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">happiness_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;happiness_2020-def.csv&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">happiness_2022</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;happiness_2022-def.csv&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/pandas/util/_decorators.py:211,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="n">kwargs</span><span class="p">[</span><span class="n">new_arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_arg_value</span>
+<span class="ne">--&gt; </span><span class="mi">211</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/pandas/util/_decorators.py:331,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">_format_argument_list</span><span class="p">(</span><span class="n">allow_args</span><span class="p">)),</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">331</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/pandas/io/parsers/readers.py:950,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">935</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">936</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">937</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">946</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">950</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/pandas/io/parsers/readers.py:605,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">602</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">604</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">605</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">608</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/pandas/io/parsers/readers.py:1442,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1439</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1441</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1442</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/pandas/io/parsers/readers.py:1735,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1733</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1734</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1735</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1736</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1737</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1738</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1739</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1740</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1741</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1742</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1743</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1744</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1745</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1746</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/pandas/io/common.py:856,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">851</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">852</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">853</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">854</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">856</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">857</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">859</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">860</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">861</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">862</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">863</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">864</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;inflation.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify the desired column order</span>
+<span class="n">column_order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">,</span> <span class="s1">&#39;Happiness score&#39;</span><span class="p">,</span> <span class="s1">&#39;Dystopia + residual&#39;</span><span class="p">,</span> <span class="s1">&#39;Explained by: Log GDP per capita&#39;</span><span class="p">,</span> <span class="s1">&#39;Explained by: Social support&#39;</span><span class="p">,</span> <span class="s1">&#39;Explained by: Healthy life expectancy&#39;</span><span class="p">,</span> <span class="s1">&#39;Explained by: Freedom to make life choices&#39;</span><span class="p">,</span> <span class="s1">&#39;Explained by: Generosity&#39;</span><span class="p">,</span> <span class="s1">&#39;Explained by: Perceptions of corruption&#39;</span><span class="p">]</span>
+
+<span class="c1"># Reorder the columns</span>
+<span class="n">happiness_2020</span> <span class="o">=</span> <span class="n">happiness_2020</span><span class="p">[</span><span class="n">column_order</span><span class="p">]</span>
+<span class="n">happiness_2022</span> <span class="o">=</span> <span class="n">happiness_2022</span><span class="p">[</span><span class="n">column_order</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list all unique country names</span>
+<span class="n">unique_countries</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">happiness_2020</span><span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">])</span>
+
+<span class="c1"># list all unique abbreviations</span>
+<span class="n">unique_abbr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">inflation</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">])</span>
+
+<span class="c1"># map all unique country names in a dictionary with abbreviations as values</span>
+<span class="n">country_mapping</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Switzerland&quot;</span><span class="p">:</span> <span class="s2">&quot;CHE&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Netherlands&quot;</span><span class="p">:</span> <span class="s2">&quot;NLD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;New Zealand&quot;</span><span class="p">:</span> <span class="s2">&quot;NZL&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Canada&quot;</span><span class="p">:</span> <span class="s2">&quot;CAN&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Saudi Arabia&quot;</span><span class="p">:</span> <span class="s2">&quot;SAU&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Chile&quot;</span><span class="p">:</span> <span class="s2">&quot;CHL&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Japan&quot;</span><span class="p">:</span> <span class="s2">&quot;JPN&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Portugal&quot;</span><span class="p">:</span> <span class="s2">&quot;PRT&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;China&quot;</span><span class="p">:</span> <span class="s2">&quot;CHN&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;South Africa&quot;</span><span class="p">:</span> <span class="s2">&quot;ZAF&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;India&quot;</span><span class="p">:</span> <span class="s2">&quot;IND&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># map the dictionary to the values of &#39;country name&#39; in the happiness dataset</span>
+<span class="n">happiness_2020</span><span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">happiness_2020</span><span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">country_mapping</span><span class="p">)</span>
+<span class="n">happiness_2020</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># export to csv</span>
+<span class="c1">#happiness_2020.to_csv(&#39;happiness_2020.csv&#39;, index=False)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country name</th>
+      <th>Happiness score</th>
+      <th>Dystopia + residual</th>
+      <th>Explained by: Log GDP per capita</th>
+      <th>Explained by: Social support</th>
+      <th>Explained by: Healthy life expectancy</th>
+      <th>Explained by: Freedom to make life choices</th>
+      <th>Explained by: Generosity</th>
+      <th>Explained by: Perceptions of corruption</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NaN</td>
+      <td>7.5599</td>
+      <td>2.350267</td>
+      <td>1.390774</td>
+      <td>1.472403</td>
+      <td>1.040533</td>
+      <td>0.628954</td>
+      <td>0.269056</td>
+      <td>0.407946</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>7.4489</td>
+      <td>2.352117</td>
+      <td>1.338946</td>
+      <td>1.463646</td>
+      <td>0.975675</td>
+      <td>0.613626</td>
+      <td>0.336318</td>
+      <td>0.368570</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NaN</td>
+      <td>7.2996</td>
+      <td>2.128108</td>
+      <td>1.242318</td>
+      <td>1.487218</td>
+      <td>1.008138</td>
+      <td>0.646790</td>
+      <td>0.325726</td>
+      <td>0.461268</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NaN</td>
+      <td>7.2321</td>
+      <td>2.195269</td>
+      <td>1.301648</td>
+      <td>1.435392</td>
+      <td>1.022502</td>
+      <td>0.644028</td>
+      <td>0.281529</td>
+      <td>0.351702</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NaN</td>
+      <td>6.4065</td>
+      <td>2.203119</td>
+      <td>1.334329</td>
+      <td>1.309950</td>
+      <td>0.759818</td>
+      <td>0.548477</td>
+      <td>0.087441</td>
+      <td>0.163322</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">inflation</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>LOCATION</th>
+      <th>INDICATOR</th>
+      <th>SUBJECT</th>
+      <th>MEASURE</th>
+      <th>TIME</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AUS</td>
+      <td>CPI</td>
+      <td>FOOD</td>
+      <td>AGRWTH</td>
+      <td>2018</td>
+      <td>0.670376</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AUS</td>
+      <td>CPI</td>
+      <td>FOOD</td>
+      <td>AGRWTH</td>
+      <td>2019</td>
+      <td>4.482894</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AUS</td>
+      <td>CPI</td>
+      <td>FOOD</td>
+      <td>AGRWTH</td>
+      <td>2020</td>
+      <td>9.320118</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AUS</td>
+      <td>CPI</td>
+      <td>FOOD</td>
+      <td>AGRWTH</td>
+      <td>2021</td>
+      <td>7.909739</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AUS</td>
+      <td>CPI</td>
+      <td>FOOD</td>
+      <td>AGRWTH</td>
+      <td>2022</td>
+      <td>8.166700</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="reflection">
+<h2>Reflection<a class="headerlink" href="#reflection" title="Permalink to this heading">#</a></h2>
+<p>To be made → we’re waiting for feedback</p>
+</section>
+<section id="work-distribution">
+<h2>Work distribution<a class="headerlink" href="#work-distribution" title="Permalink to this heading">#</a></h2>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Who?</p></th>
+<th class="head"><p>Role</p></th>
+<th class="head"><p>Tasks</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Evan</p></td>
+<td><p></p></td>
+<td><p>Visualizations, setup Github</p></td>
+</tr>
+<tr class="row-odd"><td><p>Joep</p></td>
+<td><p></p></td>
+<td><p>Visualizations</p></td>
+</tr>
+<tr class="row-even"><td><p>Lotte</p></td>
+<td><p></p></td>
+<td><p>Data preprocessing, visualizations</p></td>
+</tr>
+<tr class="row-odd"><td><p>Robin</p></td>
+<td><p></p></td>
+<td><p>Data preprocessing, documentation</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="visualizations">
+<h1>Visualizations<a class="headerlink" href="#visualizations" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inflation2020</span> <span class="o">=</span> <span class="n">inflation</span><span class="p">[</span><span class="n">inflation</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2020</span><span class="p">]</span>
+<span class="n">inflation2022</span> <span class="o">=</span> <span class="n">inflation</span><span class="p">[</span><span class="n">inflation</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2022</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">happiness_2020</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country name</th>
+      <th>Happiness score</th>
+      <th>Dystopia + residual</th>
+      <th>Explained by: Log GDP per capita</th>
+      <th>Explained by: Social support</th>
+      <th>Explained by: Healthy life expectancy</th>
+      <th>Explained by: Freedom to make life choices</th>
+      <th>Explained by: Generosity</th>
+      <th>Explained by: Perceptions of corruption</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NaN</td>
+      <td>7.5599</td>
+      <td>2.350267</td>
+      <td>1.390774</td>
+      <td>1.472403</td>
+      <td>1.040533</td>
+      <td>0.628954</td>
+      <td>0.269056</td>
+      <td>0.407946</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>7.4489</td>
+      <td>2.352117</td>
+      <td>1.338946</td>
+      <td>1.463646</td>
+      <td>0.975675</td>
+      <td>0.613626</td>
+      <td>0.336318</td>
+      <td>0.368570</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NaN</td>
+      <td>7.2996</td>
+      <td>2.128108</td>
+      <td>1.242318</td>
+      <td>1.487218</td>
+      <td>1.008138</td>
+      <td>0.646790</td>
+      <td>0.325726</td>
+      <td>0.461268</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NaN</td>
+      <td>7.2321</td>
+      <td>2.195269</td>
+      <td>1.301648</td>
+      <td>1.435392</td>
+      <td>1.022502</td>
+      <td>0.644028</td>
+      <td>0.281529</td>
+      <td>0.351702</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NaN</td>
+      <td>6.4065</td>
+      <td>2.203119</td>
+      <td>1.334329</td>
+      <td>1.309950</td>
+      <td>0.759818</td>
+      <td>0.548477</td>
+      <td>0.087441</td>
+      <td>0.163322</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NaN</td>
+      <td>6.2285</td>
+      <td>2.283013</td>
+      <td>1.096992</td>
+      <td>1.323287</td>
+      <td>0.889261</td>
+      <td>0.417482</td>
+      <td>0.155579</td>
+      <td>0.062849</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>NaN</td>
+      <td>5.9109</td>
+      <td>1.752559</td>
+      <td>1.168801</td>
+      <td>1.339530</td>
+      <td>0.979315</td>
+      <td>0.589895</td>
+      <td>0.053037</td>
+      <td>0.027733</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NaN</td>
+      <td>5.1239</td>
+      <td>1.336182</td>
+      <td>0.990533</td>
+      <td>1.132081</td>
+      <td>0.867249</td>
+      <td>0.601605</td>
+      <td>0.079021</td>
+      <td>0.117256</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>NaN</td>
+      <td>4.8141</td>
+      <td>1.625117</td>
+      <td>0.902140</td>
+      <td>1.259086</td>
+      <td>0.407034</td>
+      <td>0.434782</td>
+      <td>0.126407</td>
+      <td>0.059502</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>NaN</td>
+      <td>3.5733</td>
+      <td>0.734131</td>
+      <td>0.730576</td>
+      <td>0.644199</td>
+      <td>0.540570</td>
+      <td>0.581142</td>
+      <td>0.237072</td>
+      <td>0.105588</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">happiness_2022</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Country</th>
+      <th>Happiness score</th>
+      <th>Dystopia (1.83) + residual</th>
+      <th>Explained by: GDP per capita</th>
+      <th>Explained by: Social support</th>
+      <th>Explained by: Healthy life expectancy</th>
+      <th>Explained by: Freedom to make life choices</th>
+      <th>Explained by: Generosity</th>
+      <th>Explained by: Perceptions of corruption</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>CHE</td>
+      <td>7.512</td>
+      <td>2.153</td>
+      <td>2.026</td>
+      <td>1.226</td>
+      <td>0.822</td>
+      <td>0.677</td>
+      <td>0.147</td>
+      <td>0.461</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4</td>
+      <td>NLD</td>
+      <td>7.415</td>
+      <td>2.137</td>
+      <td>1.945</td>
+      <td>1.206</td>
+      <td>0.787</td>
+      <td>0.651</td>
+      <td>0.271</td>
+      <td>0.419</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>9</td>
+      <td>NZL</td>
+      <td>7.200</td>
+      <td>1.954</td>
+      <td>1.852</td>
+      <td>1.235</td>
+      <td>0.752</td>
+      <td>0.680</td>
+      <td>0.245</td>
+      <td>0.483</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>14</td>
+      <td>CAN</td>
+      <td>7.025</td>
+      <td>1.924</td>
+      <td>1.886</td>
+      <td>1.188</td>
+      <td>0.783</td>
+      <td>0.659</td>
+      <td>0.217</td>
+      <td>0.368</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>24</td>
+      <td>SAU</td>
+      <td>6.523</td>
+      <td>2.075</td>
+      <td>1.870</td>
+      <td>1.092</td>
+      <td>0.577</td>
+      <td>0.651</td>
+      <td>0.078</td>
+      <td>0.180</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>43</td>
+      <td>CHL</td>
+      <td>6.172</td>
+      <td>2.040</td>
+      <td>1.651</td>
+      <td>1.080</td>
+      <td>0.748</td>
+      <td>0.460</td>
+      <td>0.124</td>
+      <td>0.069</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>55</td>
+      <td>PRT</td>
+      <td>6.016</td>
+      <td>1.691</td>
+      <td>1.760</td>
+      <td>1.078</td>
+      <td>0.777</td>
+      <td>0.655</td>
+      <td>0.016</td>
+      <td>0.039</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>71</td>
+      <td>CHN</td>
+      <td>5.585</td>
+      <td>1.516</td>
+      <td>1.508</td>
+      <td>0.958</td>
+      <td>0.705</td>
+      <td>0.656</td>
+      <td>0.099</td>
+      <td>0.142</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>90</td>
+      <td>ZAF</td>
+      <td>5.194</td>
+      <td>1.742</td>
+      <td>1.425</td>
+      <td>1.088</td>
+      <td>0.361</td>
+      <td>0.442</td>
+      <td>0.089</td>
+      <td>0.046</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>135</td>
+      <td>IND</td>
+      <td>3.777</td>
+      <td>0.795</td>
+      <td>1.167</td>
+      <td>0.376</td>
+      <td>0.471</td>
+      <td>0.647</td>
+      <td>0.198</td>
+      <td>0.123</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Let’s analyse the difference in inflation between 2020 and 2022:</p>
+<ul class="simple">
+<li><p>In 2020, the inflation was considerably lower than in 2022.</p></li>
+<li><p>Has the overall happiness score for generosity in 2022 decreased compared to 2020?</p></li>
+<li><p>Can this be explained by inflation?”</p></li>
+</ul>
+<section id="happiness-and-generosity-in-2020-vs-2022">
+<h2>Happiness and Generosity in 2020 vs 2022<a class="headerlink" href="#happiness-and-generosity-in-2020-vs-2022" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Countries on the X-axis</p></li>
+<li><p>Bar for 2020 and bar for 2022 in one graph</p></li>
+<li><p>Happiness score and generosity on the Y-axis (separate graph for each variable)</p></li>
+</ul>
+<section id="question-is-inflation-higher-in-2022-than-in-2020-in-every-selected-country">
+<h3>Question: Is inflation higher in 2022 than in 2020 in every selected country?<a class="headerlink" href="#question-is-inflation-higher-in-2022-than-in-2020-in-every-selected-country" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="question-is-the-happiness-score-lower-in-2022-than-in-2020-every-selected-country">
+<h3>Question: Is the happiness score lower in 2022 than in 2020 every selected country?<a class="headerlink" href="#question-is-the-happiness-score-lower-in-2022-than-in-2020-every-selected-country" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the colors (ChatGPT)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rgb(102,194,165)&#39;</span><span class="p">,</span> <span class="s1">&#39;rgb(252,141,98)&#39;</span><span class="p">,</span> <span class="s1">&#39;rgb(141,160,203)&#39;</span><span class="p">]</span>
+
+<span class="c1"># creeer de layout</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">XAxis</span><span class="p">(</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;category&#39;</span> <span class="c1"># het type van de X as is categorisch</span>
+    <span class="p">),</span>
+    <span class="n">yaxis</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">YAxis</span><span class="p">(</span>
+        <span class="n">tickformat</span> <span class="o">=</span> <span class="s1">&#39;,.0%&#39;</span><span class="p">,</span> <span class="c1"># toon als percentage</span>
+    <span class="p">),</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span>
+<span class="p">)</span>
+
+<span class="n">year2020</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">happiness_2020</span><span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">happiness_2020</span><span class="p">[</span><span class="s1">&#39;Explained by: Generosity&#39;</span><span class="p">],</span> <span class="c1"># by year 2020</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;2020&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#ChatGPT </span>
+<span class="p">)</span>
+<span class="n">year2022</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">happiness_2022</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">happiness_2022</span><span class="p">[</span><span class="s1">&#39;Explained by: Generosity&#39;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;2022&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#ChatGPT</span>
+<span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">year2020</span><span class="p">,</span> <span class="n">year2022</span><span class="p">]</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="c1"># labels</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;World happiness explained by generosity 2020 vs 2022&quot;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Percentage explaind by generosity&quot;</span><span class="p">)</span>
+    
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="676cea38-9368-495a-99ba-2dea793a4004" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("676cea38-9368-495a-99ba-2dea793a4004")) {                    Plotly.newPlot(                        "676cea38-9368-495a-99ba-2dea793a4004",                        [{"marker":{"color":"rgb(102,194,165)"},"name":"2020","x":[null,null,null,null,null,null,null,null,null,null],"y":[0.2690557539463,0.33631756901741,0.32572621107101,0.28152891993523,0.087440684437752,0.15557900071144,0.053036946803331,0.079021044075489,0.12640684843063,0.23707248270512],"type":"bar"},{"marker":{"color":"rgb(252,141,98)"},"name":"2022","x":["CHE","NLD","NZL","CAN","SAU","CHL","PRT","CHN","ZAF","IND"],"y":[0.147,0.271,0.245,0.217,0.078,0.124,0.016,0.099,0.089,0.198],"type":"bar"}],                        {"height":400,"xaxis":{"type":"category","title":{"text":"Country"}},"yaxis":{"tickformat":",.0%","title":{"text":"Percentage explaind by generosity"}},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"text":"World happiness explained by generosity 2020 vs 2022"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('676cea38-9368-495a-99ba-2dea793a4004');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+</section>
+<section id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h3>
+<p>The graph shows that the ‘happiness explained by generosity is lower  for almost every country in 2022 than in 2020. Inflation is much higher in 2022 than in 2020. From this graph can be concluded that when inflation is higher, people experience less happiness due to generosity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Functie om de aslabels handmatig te formatteren</span>
+<span class="k">def</span> <span class="nf">custom_tickformat</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define the colors (ChatGPT)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rgb(102,194,165)&#39;</span><span class="p">,</span> <span class="s1">&#39;rgb(252,141,98)&#39;</span><span class="p">,</span> <span class="s1">&#39;rgb(141,160,203)&#39;</span><span class="p">]</span>
+
+<span class="c1"># creeer de layout</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">XAxis</span><span class="p">(</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;category&#39;</span> <span class="c1"># het type van de X as is categorisch</span>
+    <span class="p">),</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">YAxis</span><span class="p">(</span>
+        <span class="n">tickvals</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>  <span class="c1"># Gebruik de y-waarden als aslabels</span>
+        <span class="n">ticktext</span><span class="o">=</span><span class="p">[</span><span class="n">custom_tickformat</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">fig</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">],</span>  <span class="c1"># Formatteer de aslabels</span>
+    <span class="p">),</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span>
+<span class="p">)</span>
+
+<span class="c1"># defineer de data</span>
+<span class="n">year2020</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">inflation2020</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">inflation2020</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="c1"># by year 2020</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;2020&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#ChatGPT </span>
+<span class="p">)</span>
+<span class="n">year2022</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">inflation2022</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">inflation2022</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;2022&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#ChatGPT</span>
+<span class="p">)</span>
+
+<span class="c1"># creeer het figuur</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">year2020</span><span class="p">,</span> <span class="n">year2022</span><span class="p">]</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="c1"># labels</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Inflatie per land&quot;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Inflatie percentage ten opzichte van 2015&quot;</span><span class="p">)</span>
+    
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="5d570b00-8414-45fe-b57e-628b07854e8e" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("5d570b00-8414-45fe-b57e-628b07854e8e")) {                    Plotly.newPlot(                        "5d570b00-8414-45fe-b57e-628b07854e8e",                        [{"marker":{"color":"rgb(102,194,165)"},"name":"2020","x":["AUS","AUS","AUT","AUT","BEL","BEL","CAN","CAN","CZE","CZE","DNK","DNK","FIN","FIN","FRA","FRA","DEU","DEU","ITA","ITA","JPN","JPN","MEX","MEX","NLD","NLD","NZL","NZL","NOR","NOR","PRT","PRT","ESP","ESP","CHE","CHE","GBR","GBR","USA","USA","BRA","CHL","CHL","CHN","EST","EST","IND","ZAF","ZAF","OECD","OECD","G-7","OECDE","G-7","OECDE","COL","SAU","EA19","EA19","ZAF","FRA","MEX","OECDE","PRT","CAN","ITA","CHL","CHE","EA19","DEU","NOR","BEL","FIN","AUT","USA","OECD","NZL","DNK","GBR","AUS","NLD","EST","ESP","CZE","JPN","G-7","COL","COL","ARG","CRI","CRI","G-20","CRI","SAU","ARG","EU27_2020","EU27_2020","EU27_2020"],"y":[9.320118,0.8469055,2.331635,1.381909,2.881715,0.7407918,2.400181,0.7169997,4.538125,3.161295,0.6386206,0.420712,1.66011,0.2905546,2.021613,0.4764988,2.140428,0.1448705,1.400448,-0.1377076,1.197302,-0.01666667,6.621487,3.396834,1.889179,1.27246,3.180124,1.714562,3.261978,1.286585,2.087344,-0.01243833,2.354986,-0.322753,0.09248759,-0.725875,0.7,1.0,3.50503,1.233584,3.211768,6.739003,3.045491,2.5,2.139228,-0.4445311,5.561349,4.388361,3.210036,3.417091,1.346594,2.681905,3.014454,0.8373157,1.59706,2.52662,3.445458,2.0,0.3,3.359348,0.8851095,3.200822,2.046867,-0.03927258,1.187,0.4921978,2.286143,-0.3414941,0.7,0.287277,2.665058,1.479317,0.504051,1.899783,1.702817,1.693894,2.223668,0.9559481,1.5,-0.004077226,2.125606,0.1487379,0.5682508,3.631627,0.1084327,1.246457,5.551534,2.247486,42.01509,0.7249115,1.310271,2.694649,0.4831476,9.012465,46.96305,2.5,0.7,1.1],"type":"bar"},{"marker":{"color":"rgb(252,141,98)"},"name":"2022","x":["AUS","AUS","AUT","AUT","BEL","BEL","CAN","CAN","CZE","CZE","DNK","DNK","FIN","FIN","FRA","FRA","DEU","DEU","ITA","ITA","JPN","JPN","MEX","MEX","NLD","NLD","NZL","NZL","NOR","NOR","PRT","PRT","ESP","ESP","CHE","CHE","GBR","GBR","USA","USA","BRA","CHL","CHL","EST","EST","IND","ZAF","ZAF","OECD","OECD","G-7","OECDE","G-7","OECDE","COL","SAU","EA19","EA19","ZAF","FRA","MEX","OECDE","PRT","CAN","ITA","CHL","CHE","EA19","DEU","NOR","BEL","FIN","AUT","USA","OECD","NZL","DNK","GBR","AUS","NLD","EST","ESP","CZE","JPN","G-7","COL","COL","ARG","G-20","SAU","ARG","EU27_2020","EU27_2020","EU27_2020"],"y":[8.1667,6.594097,10.74824,8.54687,8.794951,9.597511,9.762547,6.802801,16.6946,15.10017,11.5142,7.696567,10.50721,7.123507,7.277634,5.222367,12.56164,6.872574,9.141557,8.20129,4.901634,2.508333,13.26198,7.896276,10.74305,10.00121,8.660672,7.172225,6.495117,5.764123,12.99107,7.832691,11.63969,8.390576,1.658954,2.835028,10.9,7.9,11.43888,8.0028,9.280107,17.72102,11.64387,19.91215,19.39826,5.90043,9.284925,7.039727,13.15614,9.55068,10.40229,17.55079,7.142418,13.78405,10.17724,2.474074,10.5,8.4,4.556124,2.779273,5.998022,9.311513,5.616037,5.079893,2.932897,8.951247,1.715623,4.0,3.92777,3.612885,4.569578,4.146388,5.489844,6.150387,6.751289,5.993085,4.025807,5.3,5.545571,4.249225,9.726146,3.69075,12.19632,0.3189525,4.899688,24.96117,6.480474,72.43076,8.563109,3.720494,74.63056,11.9,9.2,4.7],"type":"bar"}],                        {"height":400,"xaxis":{"type":"category","title":{"text":"Country"}},"yaxis":{"ticktext":["0,3","0,3","0,3","0,3","0,1","0,2","0,1","0,1","0,1","0,2"],"tickvals":[0.2690557539463,0.33631756901741,0.32572621107101,0.28152891993523,0.087440684437752,0.15557900071144,0.053036946803331,0.079021044075489,0.12640684843063,0.23707248270512],"title":{"text":"Inflatie percentage ten opzichte van 2015"}},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"text":"Inflatie per land"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('5d570b00-8414-45fe-b57e-628b07854e8e');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+</section>
+<section id="happiness-vs-inflation-in-different-countries">
+<h3>Happiness vs inflation in different countries<a class="headerlink" href="#happiness-vs-inflation-in-different-countries" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;happiness_2020-def.csv&#39;</span><span class="p">)</span>
+
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;happiness_2022-def.csv&#39;</span><span class="p">)</span>
+
+<span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data_inflatie.csv&#39;</span><span class="p">)</span>
+<span class="n">df3</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="n">df3</span><span class="p">[</span><span class="s2">&quot;TIME&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;2020&quot;</span><span class="p">]</span>
+<span class="n">df3</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="n">df3</span><span class="p">[</span><span class="s2">&quot;SUBJECT&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;TOT&quot;</span><span class="p">]</span>
+<span class="n">df3</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="n">df3</span><span class="p">[</span><span class="s2">&quot;MEASURE&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;IDX2015&quot;</span><span class="p">]</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CHE&quot;</span><span class="p">,</span> <span class="s2">&quot;NLD&quot;</span><span class="p">,</span> <span class="s2">&quot;NZL&quot;</span><span class="p">,</span> <span class="s2">&quot;CAN&quot;</span><span class="p">,</span> <span class="s2">&quot;SAU&quot;</span><span class="p">,</span> <span class="s2">&quot;CHL&quot;</span><span class="p">,</span> <span class="s2">&quot;PRT&quot;</span><span class="p">,</span> <span class="s2">&quot;CHN&quot;</span><span class="p">,</span> <span class="s2">&quot;ZAF&quot;</span><span class="p">,</span> <span class="s2">&quot;IND&quot;</span><span class="p">]</span>
+<span class="n">df3</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="n">df3</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">countries</span><span class="p">)]</span>
+
+<span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data_inflatie.csv&#39;</span><span class="p">)</span>
+<span class="n">df4</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="n">df4</span><span class="p">[</span><span class="s2">&quot;TIME&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;2022&quot;</span><span class="p">]</span>
+<span class="n">df4</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="n">df4</span><span class="p">[</span><span class="s2">&quot;SUBJECT&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;TOT&quot;</span><span class="p">]</span>
+<span class="n">df4</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="n">df4</span><span class="p">[</span><span class="s2">&quot;MEASURE&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;IDX2015&quot;</span><span class="p">]</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CHE&quot;</span><span class="p">,</span> <span class="s2">&quot;NLD&quot;</span><span class="p">,</span> <span class="s2">&quot;NZL&quot;</span><span class="p">,</span> <span class="s2">&quot;CAN&quot;</span><span class="p">,</span> <span class="s2">&quot;SAU&quot;</span><span class="p">,</span> <span class="s2">&quot;CHL&quot;</span><span class="p">,</span> <span class="s2">&quot;PRT&quot;</span><span class="p">,</span> <span class="s2">&quot;CHN&quot;</span><span class="p">,</span> <span class="s2">&quot;ZAF&quot;</span><span class="p">,</span> <span class="s2">&quot;IND&quot;</span><span class="p">]</span>
+<span class="n">df4</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="n">df4</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">countries</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Maak van de x-as 2 getallen in plaats van 3 getallen</span>
+<span class="n">df3</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">100</span>
+<span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">100</span>
+
+<span class="c1"># Plot de punten in de grafiek</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df3</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">],</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;Happiness score&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;2020&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">],</span> <span class="n">df2</span><span class="p">[</span><span class="s2">&quot;Happiness score&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;2022&quot;</span><span class="p">)</span>
+
+<span class="c1"># Geef labels aan de assen</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Increase in inflation compared to 2015 (%)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Happiness Score&#39;</span><span class="p">)</span>
+
+<span class="c1"># Voeg labels toe aan de punten</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df3</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">],</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;Happiness score&quot;</span><span class="p">],</span> <span class="n">df3</span><span class="p">[</span><span class="s2">&quot;LOCATION&quot;</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">],</span> <span class="n">df2</span><span class="p">[</span><span class="s2">&quot;Happiness score&quot;</span><span class="p">],</span> <span class="n">df4</span><span class="p">[</span><span class="s2">&quot;LOCATION&quot;</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+
+<span class="c1"># Trek lijnen tussen de punten voor overzicht</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">df3</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">],</span> <span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">]],</span> <span class="p">[</span><span class="n">df1</span><span class="p">[</span><span class="s2">&quot;Happiness score&quot;</span><span class="p">],</span> <span class="n">df2</span><span class="p">[</span><span class="s2">&quot;Happiness score&quot;</span><span class="p">]],</span> <span class="s1">&#39;k-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Happiness and inflation in countries&quot;</span><span class="p">)</span>
+
+<span class="c1">#</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Toon de grafiek</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d2f5413f726dac67b1fa17d55a47ca155b55c5ef7c53a72ae448275d7cd0f0e7.png" src="../_images/d2f5413f726dac67b1fa17d55a47ca155b55c5ef7c53a72ae448275d7cd0f0e7.png" />
+</div>
+</div>
+<p>The graph shown above is a scatterplot that shows the correlation between happiness in a country and the increased inflation in said country. The y-axis shows the “Happiness Score” that each country received. This indicates the
+happiness of inhabitants from this country on a scale of 1 to 10. The dots are labeled by country code. The blue dots represent said country in the year 2020, and the orange dots represent said country in 2022. The x-axis shows the increase in inflation compared to the year 2015. Where an increase in 10% means that prices in this country are 110% of what they used to be in the year 2015. The lines between the dots function to easily show an increase or decrease in happiness. With this graph we aimed to either confirm or debunk one of our perspectives.</p>
+<p>The remarkable result is that there is no clear pattern in the scatterplot. We do see that every country has seen an increase in inflation. However some countries have increased their happiness score, while others have seen a decrease in happiness. This means that we can not confirm nor debunk either one of our perspectives. This does show that there is no clear correlation</p>
+<p>between the inflation of a country and the happiness of the inhabitants of said country.</p>
+</section>
+<section id="gdp-per-capita-and-happiness">
+<h3>GDP per Capita and Happiness:<a class="headerlink" href="#gdp-per-capita-and-happiness" title="Permalink to this heading">#</a></h3>
+<p>We will explore the correlation between GDP per capita and happiness scores.</p>
+<p>We will argue that countries with higher GDP per capita may have better economic opportunities, access to resources, and quality of life, which could positively impact happiness levels.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;happiness_2020-def.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># sort by country</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Country name&#39;</span><span class="p">)</span>
+
+<span class="c1"># create stacked bar chart</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Explained by: Log GDP per capita&#39;</span><span class="p">,</span> <span class="s1">&#39;Happiness score&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Country name&#39;</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> 
+<span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;stack&#39;</span><span class="p">,</span> <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Explained by: Log GDP per capita&#39;</span><span class="p">:</span> <span class="s1">&#39;#1F77B4&#39;</span><span class="p">,</span> <span class="s1">&#39;Happiness score&#39;</span><span class="p">:</span> <span class="s1">&#39;#AEC7E8&#39;</span><span class="p">})</span>
+
+<span class="c1">#edit chart</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;GDP per capita and Happiness in 2020&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Variables&#39;</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="08f9bf13-3735-44c4-9384-17e6137fb3cc" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("08f9bf13-3735-44c4-9384-17e6137fb3cc")) {                    Plotly.newPlot(                        "08f9bf13-3735-44c4-9384-17e6137fb3cc",                        [{"alignmentgroup":"True","hovertemplate":"variable=Explained by: Log GDP per capita<br>value=%{x}<br>Country name=%{y}<extra></extra>","legendgroup":"Explained by: Log GDP per capita","marker":{"color":"#1F77B4","pattern":{"shape":""}},"name":"Explained by: Log GDP per capita","offsetgroup":"Explained by: Log GDP per capita","orientation":"h","showlegend":true,"textposition":"auto","x":[1.3016476631165,1.3907742500305,1.0969924926758,0.99053341150284,0.73057615756989,1.3389463424683,1.2423179149628,1.1688008308411,1.3343285322189,0.90214043855667],"xaxis":"x","y":["CAN","CHE","CHL","CHN","IND","NLD","NZL","PRT","SAU","ZAF"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","hovertemplate":"variable=Happiness score<br>value=%{x}<br>Country name=%{y}<extra></extra>","legendgroup":"Happiness score","marker":{"color":"#AEC7E8","pattern":{"shape":""}},"name":"Happiness score","offsetgroup":"Happiness score","orientation":"h","showlegend":true,"textposition":"auto","x":[7.2321000099182,7.5598998069763,6.2284998893738,5.123899936676,3.5732998847961,7.4489002227783,7.2996001243591,5.9109001159668,6.4064998626709,4.8140997886658],"xaxis":"x","y":["CAN","CHE","CHL","CHN","IND","NLD","NZL","PRT","SAU","ZAF"],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"value"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Country name"}},"legend":{"title":{"text":"Variables"},"tracegroupgap":0},"margin":{"t":60},"barmode":"stack","title":{"text":"GDP per capita and Happiness in 2020"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('08f9bf13-3735-44c4-9384-17e6137fb3cc');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;happiness_2022-def.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># sort by country</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Country&#39;</span><span class="p">)</span>
+
+<span class="c1"># create stacked bar chart</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Explained by: GDP per capita&#39;</span><span class="p">,</span> <span class="s1">&#39;Happiness score&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> 
+             <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;stack&#39;</span><span class="p">,</span> <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Explained by: GDP per capita&#39;</span><span class="p">:</span> <span class="s1">&#39;#1F77B4&#39;</span><span class="p">,</span> <span class="s1">&#39;Happiness score&#39;</span><span class="p">:</span> <span class="s1">&#39;#AEC7E8&#39;</span><span class="p">})</span>
+
+
+<span class="c1">#edit chart</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;GDP per capita and Happiness in 2022&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Variables&#39;</span><span class="p">))</span>
+
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="4dc91f08-7637-47d0-9c7c-3bf6ec133249" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("4dc91f08-7637-47d0-9c7c-3bf6ec133249")) {                    Plotly.newPlot(                        "4dc91f08-7637-47d0-9c7c-3bf6ec133249",                        [{"alignmentgroup":"True","hovertemplate":"variable=Explained by: GDP per capita<br>value=%{x}<br>Country=%{y}<extra></extra>","legendgroup":"Explained by: GDP per capita","marker":{"color":"#1F77B4","pattern":{"shape":""}},"name":"Explained by: GDP per capita","offsetgroup":"Explained by: GDP per capita","orientation":"h","showlegend":true,"textposition":"auto","x":[1.886,2.026,1.651,1.508,1.167,1.945,1.852,1.76,1.87,1.425],"xaxis":"x","y":["CAN","CHE","CHL","CHN","IND","NLD","NZL","PRT","SAU","ZAF"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","hovertemplate":"variable=Happiness score<br>value=%{x}<br>Country=%{y}<extra></extra>","legendgroup":"Happiness score","marker":{"color":"#AEC7E8","pattern":{"shape":""}},"name":"Happiness score","offsetgroup":"Happiness score","orientation":"h","showlegend":true,"textposition":"auto","x":[7.025,7.512,6.172,5.585,3.777,7.415,7.2,6.016,6.523,5.194],"xaxis":"x","y":["CAN","CHE","CHL","CHN","IND","NLD","NZL","PRT","SAU","ZAF"],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"value"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Country"}},"legend":{"title":{"text":"Variables"},"tracegroupgap":0},"margin":{"t":60},"barmode":"stack","title":{"text":"GDP per capita and Happiness in 2022"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('4dc91f08-7637-47d0-9c7c-3bf6ec133249');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<p>Looking at the charts of both 2020 and 2022, for most countries it is true that those with a high happiness score also appear to have a high GDP, and vice versa. Thus, these visualization support the idea that a high GDP per capita will have a positive effect on the overall happiness of the population. For example, India has both the lowest happiness score and lowest GDP per capita, and Switzerland has both the highest happiness score and the highest GDP per capita. This is true for both graphs.</p>
+<p>However, one can also make some arguments for an opposing statement. A higher GDP does not imply a higher happiness score for each country. For example: In 2020 Saudi-Arabia and Canada have a fairly even GDP per Capita, at 1.33 and 1.30. However, Saudi-Arabia has a happiness score of 6.4 while Canada has a happiness score of 7.2.</p>
+<p>Thus, overall a higher GDP per capita will lead to a better happiness score, likely due to the citizens of these countries having enough wealth and financial stability in order to live a fulfilling live. However, other variables such as individual freedom are of importance too, which is why a rich country like Saudi-Arabia may still end up with a lower happiness score.</p>
+</section>
+</section>
+<section id="visualization-drafts">
+<h2>Visualization drafts<a class="headerlink" href="#visualization-drafts" title="Permalink to this heading">#</a></h2>
+<section id="unemployment-rate-happiness-score-2020-vs-2022-draft">
+<h3>Unemployment rate, happiness score: 2020 vs 2022 (draft)<a class="headerlink" href="#unemployment-rate-happiness-score-2020-vs-2022-draft" title="Permalink to this heading">#</a></h3>
+<p>We found a third dataset from OECD stats on Labour Market Statistics which we still have to preprocess to use for our analysis. The dataset contains data for each of our selected countries about (un)employment rates by age, age group, gender and educational level.</p>
+<p>We want to filter the dataset for the years 2020 and 2022. We then want to merge this dataset with the happiness dataset and create a data visualization to test the correlation between the unemployment rate and happiness rate for different age groups.</p>
+<p>The second visualization will be based on the same filtered data and will visualize the possible correlation between the happiness rate of unemployed people grouped by different educational levels.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Correlation between Happiness and Economic Factors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectives">Perspectives</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets-and-preprocessing">Datasets and preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-world-happiness-report">Dataset 1: World happiness report</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-inflation-cpi">Dataset 2: Inflation (CPI)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-selection">Data selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection">Reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#work-distribution">Work distribution</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizations">Visualizations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#happiness-and-generosity-in-2020-vs-2022">Happiness and Generosity in 2020 vs 2022</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-is-inflation-higher-in-2022-than-in-2020-in-every-selected-country">Question: Is inflation higher in 2022 than in 2020 in every selected country?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-is-the-happiness-score-lower-in-2022-than-in-2020-every-selected-country">Question: Is the happiness score lower in 2022 than in 2020 every selected country?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#happiness-vs-inflation-in-different-countries">Happiness vs inflation in different countries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gdp-per-capita-and-happiness">GDP per Capita and Happiness:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-drafts">Visualization drafts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unemployment-rate-happiness-score-2020-vs-2022-draft">Unemployment rate, happiness score: 2020 vs 2022 (draft)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yen-Chia Hsu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
