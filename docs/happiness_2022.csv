@@ -1,0 +1,11 @@
+Unnamed: 0,Country,Happiness score,Dystopia (1.83) + residual,Explained by: GDP per capita,Explained by: Social support,Explained by: Healthy life expectancy,Explained by: Freedom to make life choices,Explained by: Generosity,Explained by: Perceptions of corruption
+3,CHE,7.512,2.153,2.026,1.226,0.822,0.677,0.147,0.461
+4,NLD,7.415,2.137,1.945,1.206,0.787,0.651,0.271,0.419
+9,NZL,7.2,1.954,1.852,1.235,0.752,0.68,0.245,0.483
+14,CAN,7.025,1.924,1.886,1.188,0.783,0.659,0.217,0.368
+24,SAU,6.523,2.075,1.87,1.092,0.577,0.651,0.078,0.18
+43,CHL,6.172,2.04,1.651,1.08,0.748,0.46,0.124,0.069
+55,PRT,6.016,1.691,1.76,1.078,0.777,0.655,0.016,0.039
+71,CHN,5.585,1.516,1.508,0.958,0.705,0.656,0.099,0.142
+90,ZAF,5.194,1.742,1.425,1.088,0.361,0.442,0.089,0.046
+135,IND,3.777,0.795,1.167,0.376,0.471,0.647,0.198,0.123
