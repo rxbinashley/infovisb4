@@ -421,7 +421,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="cell tag_{ tag_&quot;tags&quot;: tag_[ tag_&quot;hide-input&quot; tag_] tag_} docutils container">
+  <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
@@ -431,6 +436,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <section id="correlation-between-happiness-and-economic-factors">
 <h1>Correlation between Happiness and Economic Factors<a class="headerlink" href="#correlation-between-happiness-and-economic-factors" title="Permalink to this heading">#</a></h1>
@@ -1007,7 +1013,7 @@ During our analysis we will work with the variables of our eight chosen countrie
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_{ tag_&quot;tags&quot;: tag_[ tag_&quot;hide-input&quot; tag_] tag_} docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inflation</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;inflation.csv&#39;</span><span class="p">)</span>
 <span class="n">happiness_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;happiness_2020-def.csv&#39;</span><span class="p">)</span>
@@ -1018,7 +1024,12 @@ During our analysis we will work with the variables of our eight chosen countrie
 </div>
 </div>
 </div>
-<div class="cell tag_{ tag_&quot;tags&quot;: tag_[ tag_&quot;hide-input&quot; tag_] tag_} docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list all unique country names</span>
 <span class="n">unique_countries</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">happiness_2020</span><span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">])</span>
@@ -1050,6 +1061,7 @@ During our analysis we will work with the variables of our eight chosen countrie
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -1167,7 +1179,12 @@ During our analysis we will work with the variables of our eight chosen countrie
 <h1>Perspective 1: Inflation has a minimal impact on happiness.<a class="headerlink" href="#perspective-1-inflation-has-a-minimal-impact-on-happiness" title="Permalink to this heading">#</a></h1>
 <p>While inflation is an important economic indicator, its influence on happiness might be overshadowed by other factors. This perspective suggests that while economic stability is crucial, it may not be the sole determinant of happiness. To see if this perspective is valid, three visualisations have been created.</p>
 <p>The first visualisation illustrates the increase the inflation between the years 2020 and 2022 per selected country. The lines in the graph represent the increase in inflation for the different countries. In the visualisation can be seen how for every counrty the inflation has increased in 2022. The graph also shows how high the inflation rates are in comparison with the inflation in 2015. The year 2015 got the value of 100, so an inflation rate of 130 means that the inflation got 30% higher in that year in comparison to 2015.</p>
-<div class="cell tag_{ tag_&quot;tags&quot;: tag_[ tag_&quot;hide-input&quot; tag_] tag_} docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the colors</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rgb(102,194,165)&#39;</span><span class="p">,</span> <span class="s1">&#39;rgb(252,141,98)&#39;</span><span class="p">,</span> <span class="s1">&#39;rgb(141,160,203)&#39;</span><span class="p">]</span>
@@ -1219,6 +1236,7 @@ During our analysis we will work with the variables of our eight chosen countrie
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
@@ -1259,7 +1277,7 @@ During our analysis we will work with the variables of our eight chosen countrie
 <p>: &gt; Figure 1:</p>
 <p>From this visualisation can be concluded that for every chosen country the inflation has increased in 2022 in perspective to 2020. With that said, let’s start to look at the world happiness rates in 2020 and 2022.</p>
 <p>The second visualisation represents the happiness rate per country in 2020 and in 2022. For every country two bars have been plotted to represent the happiness rate in the two years. The orange bars represent the year 2020 and the blue represent the year 2022.</p>
-<div class="cell tag_{ tag_&quot;tags&quot;: tag_[ tag_&quot;hide-input&quot; tag_] tag_} docutils container">
+<div class="cell tag_&quot;hide-input&quot; docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1414,7 +1432,7 @@ if (outputEl) {{
 </div>
 <p>As shown in the visualisation above, the happiness rate per country in 2022 did not significantly change compared to the happiness rate in 2020. Because of this, the aim of this perspective is to explore the underlying factors contributing to the happiness rate and assess whether their distribution varied between the two years. The third visualisation has been made for this purpose.</p>
 <p>The third visualisation illustrates the distribution of the underlying factors which make up the happiness score per year. The mean of every column was calculated to create an average distribution per year. With this visualisation can be analysed how the distribution of the happiness rate factores change when the inflation gets higher. The dropdown can be used to switch between the two years.</p>
-<div class="cell tag_{ tag_&quot;tags&quot;: tag_[ tag_&quot;hide-input&quot; tag_] tag_} docutils container">
+<div class="cell tag_&quot;hide-input&quot; docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dash</span>
 <span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">dcc</span>
