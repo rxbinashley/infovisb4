@@ -71,12 +71,12 @@ def update_pie_chart(dataset):
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(port=8053, debug=True)
+    app.run_server(port=2051, debug=True)
 ------------------
 
 ----- stderr -----
 Address already in use
-Port 8053 is in use by another program. Either identify and stop that program, or start the server with a different port.
+Port 2051 is in use by another program. Either identify and stop that program, or start the server with a different port.
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
@@ -105,7 +105,7 @@ During handling of the above exception, another exception occurred:
 
 Cell [0;32mIn[9], line 57[0m
 [1;32m     56[0m [38;5;28;01mif[39;00m [38;5;18m__name__[39m [38;5;241m==[39m [38;5;124m'[39m[38;5;124m__main__[39m[38;5;124m'[39m:
-[0;32m---> 57[0m     [43mapp[49m[38;5;241;43m.[39;49m[43mrun_server[49m[43m([49m[43mport[49m[38;5;241;43m=[39;49m[38;5;241;43m8053[39;49m[43m,[49m[43m [49m[43mdebug[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[0;32m---> 57[0m     [43mapp[49m[38;5;241;43m.[39;49m[43mrun_server[49m[43m([49m[43mport[49m[38;5;241;43m=[39;49m[38;5;241;43m2051[39;49m[43m,[49m[43m [49m[43mdebug[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
 
 File [0;32m/usr/local/Caskroom/miniconda/base/lib/python3.10/site-packages/dash/dash.py:2091[0m, in [0;36mDash.run_server[0;34m(self, *args, **kwargs)[0m
 [1;32m   2086[0m [38;5;250m[39m[38;5;124;03m"""`run_server` is a deprecated alias of `run` and may be removed in a[39;00m
