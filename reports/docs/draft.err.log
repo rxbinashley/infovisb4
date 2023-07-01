@@ -17,24 +17,21 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Define the colors
+
 colors = ['rgb(102,194,165)', 'rgb(252,141,98)', 'rgb(141,160,203)']
 
-# Create the layout
+
 layout = go.Layout(
     xaxis=go.layout.XAxis(
         type='category',  # The x-axis type is categorical
         tickvals=['2020', '2022'],  # Set custom tick values
         ticktext=['2020', '2022'],  # Set custom tick labels
     ),
-#     yaxis=go.layout.YAxis(
-#         tickformat="%",  # Format the y-axis labels as percentage
-#     ),
+
     width=600,
     height=600
 )
 
-# Define the data
 data = []
 for country in inflation2020['LOCATION'].unique():
     # Extract the data for each country
@@ -47,40 +44,40 @@ for country in inflation2020['LOCATION'].unique():
         y=[country_data_2020['Value'].iloc[0], country_data_2022['Value'].iloc[0]],
         mode='lines+markers',
         name=country,
-#         marker=dict(color=colors)  # Randomly assign a color from the predefined colors
+#         
     )
     
     data.append(trace)
 
-# Create the figure with data and layout
+
 fig = go.Figure(data=data, layout=layout)
 
-# Update the layout and labels
+
 fig.update_layout(
     title="Inflation Rates by Country with the year 2015 as inflation rate 100",
     xaxis_title="Year",
     yaxis_title="Inflation Rate",
 )
 
-# Display the graph
+
 fig.show()
 
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mIndexError[0m                                Traceback (most recent call last)
-Cell [0;32mIn[8], line 28[0m
-[1;32m     23[0m     country_data_2022 [38;5;241m=[39m inflation2022[inflation2022[[38;5;124m'[39m[38;5;124mLOCATION[39m[38;5;124m'[39m] [38;5;241m==[39m country]
-[1;32m     25[0m     [38;5;66;03m# Create a trace for each country[39;00m
-[1;32m     26[0m     trace [38;5;241m=[39m go[38;5;241m.[39mScatter(
-[1;32m     27[0m         x[38;5;241m=[39m[[38;5;124m'[39m[38;5;124m2020[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m2022[39m[38;5;124m'[39m],
-[0;32m---> 28[0m         y[38;5;241m=[39m[country_data_2020[[38;5;124m'[39m[38;5;124mValue[39m[38;5;124m'[39m][38;5;241m.[39miloc[[38;5;241m0[39m], [43mcountry_data_2022[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mValue[39;49m[38;5;124;43m'[39;49m[43m][49m[38;5;241;43m.[39;49m[43miloc[49m[43m[[49m[38;5;241;43m0[39;49m[43m][49m],
-[1;32m     29[0m         mode[38;5;241m=[39m[38;5;124m'[39m[38;5;124mlines+markers[39m[38;5;124m'[39m,
-[1;32m     30[0m         name[38;5;241m=[39mcountry,
-[1;32m     31[0m [38;5;66;03m#         marker=dict(color=colors)  # Randomly assign a color from the predefined colors[39;00m
-[1;32m     32[0m     )
-[1;32m     34[0m     data[38;5;241m.[39mappend(trace)
-[1;32m     36[0m [38;5;66;03m# Create the figure with data and layout[39;00m
+Cell [0;32mIn[8], line 24[0m
+[1;32m     19[0m     country_data_2022 [38;5;241m=[39m inflation2022[inflation2022[[38;5;124m'[39m[38;5;124mLOCATION[39m[38;5;124m'[39m] [38;5;241m==[39m country]
+[1;32m     21[0m     [38;5;66;03m# Create a trace for each country[39;00m
+[1;32m     22[0m     trace [38;5;241m=[39m go[38;5;241m.[39mScatter(
+[1;32m     23[0m         x[38;5;241m=[39m[[38;5;124m'[39m[38;5;124m2020[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m2022[39m[38;5;124m'[39m],
+[0;32m---> 24[0m         y[38;5;241m=[39m[country_data_2020[[38;5;124m'[39m[38;5;124mValue[39m[38;5;124m'[39m][38;5;241m.[39miloc[[38;5;241m0[39m], [43mcountry_data_2022[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mValue[39;49m[38;5;124;43m'[39;49m[43m][49m[38;5;241;43m.[39;49m[43miloc[49m[43m[[49m[38;5;241;43m0[39;49m[43m][49m],
+[1;32m     25[0m         mode[38;5;241m=[39m[38;5;124m'[39m[38;5;124mlines+markers[39m[38;5;124m'[39m,
+[1;32m     26[0m         name[38;5;241m=[39mcountry,
+[1;32m     27[0m [38;5;66;03m#         [39;00m
+[1;32m     28[0m     )
+[1;32m     30[0m     data[38;5;241m.[39mappend(trace)
+[1;32m     33[0m fig [38;5;241m=[39m go[38;5;241m.[39mFigure(data[38;5;241m=[39mdata, layout[38;5;241m=[39mlayout)
 
 File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/core/indexing.py:1073[0m, in [0;36m_LocationIndexer.__getitem__[0;34m(self, key)[0m
 [1;32m   1070[0m axis [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39maxis [38;5;129;01mor[39;00m [38;5;241m0[39m
