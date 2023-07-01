@@ -17,84 +17,89 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-
-colors = ['rgb(102,194,165)', 'rgb(252,141,98)', 'rgb(141,160,203)']
-
-
-layout = go.Layout(
-    xaxis=go.layout.XAxis(
-        type='category',  # The x-axis type is categorical
-        tickvals=['2020', '2022'],  # Set custom tick values
-        ticktext=['2020', '2022'],  # Set custom tick labels
-    ),
-
-    width=600,
-    height=600
-)
-
-data = []
-for country in inflation2020['LOCATION'].unique():
-    # Extract the data for each country
-    country_data_2020 = inflation2020[inflation2020['LOCATION'] == country]
-    country_data_2022 = inflation2022[inflation2022['LOCATION'] == country]
-    
-    # Create a trace for each country
-    trace = go.Scatter(
-        x=['2020', '2022'],
-        y=[country_data_2020['Value'].iloc[0], country_data_2022['Value'].iloc[0]],
-        mode='lines+markers',
-        name=country,
-#         
-    )
-    
-    data.append(trace)
-
-
-fig = go.Figure(data=data, layout=layout)
-
-
-fig.update_layout(
-    title="Inflation Rates by Country with the year 2015 as inflation rate 100",
-    xaxis_title="Year",
-    yaxis_title="Inflation Rate",
-)
-
-
-fig.show()
-
+inflation = pd.read_csv('inflation.csv')
+happiness_2020 = pd.read_csv('happiness_2020-def.csv')
+happiness_2022 = pd.read_csv('happiness_2022-def.csv')
+inflation.drop('Flag Codes', axis=1, inplace=True)
+inflation.drop('FREQUENCY', axis=1, inplace=True)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mIndexError[0m                                Traceback (most recent call last)
-Cell [0;32mIn[8], line 24[0m
-[1;32m     19[0m     country_data_2022 [38;5;241m=[39m inflation2022[inflation2022[[38;5;124m'[39m[38;5;124mLOCATION[39m[38;5;124m'[39m] [38;5;241m==[39m country]
-[1;32m     21[0m     [38;5;66;03m# Create a trace for each country[39;00m
-[1;32m     22[0m     trace [38;5;241m=[39m go[38;5;241m.[39mScatter(
-[1;32m     23[0m         x[38;5;241m=[39m[[38;5;124m'[39m[38;5;124m2020[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m2022[39m[38;5;124m'[39m],
-[0;32m---> 24[0m         y[38;5;241m=[39m[country_data_2020[[38;5;124m'[39m[38;5;124mValue[39m[38;5;124m'[39m][38;5;241m.[39miloc[[38;5;241m0[39m], [43mcountry_data_2022[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mValue[39;49m[38;5;124;43m'[39;49m[43m][49m[38;5;241;43m.[39;49m[43miloc[49m[43m[[49m[38;5;241;43m0[39;49m[43m][49m],
-[1;32m     25[0m         mode[38;5;241m=[39m[38;5;124m'[39m[38;5;124mlines+markers[39m[38;5;124m'[39m,
-[1;32m     26[0m         name[38;5;241m=[39mcountry,
-[1;32m     27[0m [38;5;66;03m#         [39;00m
-[1;32m     28[0m     )
-[1;32m     30[0m     data[38;5;241m.[39mappend(trace)
-[1;32m     33[0m fig [38;5;241m=[39m go[38;5;241m.[39mFigure(data[38;5;241m=[39mdata, layout[38;5;241m=[39mlayout)
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[2], line 1[0m
+[0;32m----> 1[0m inflation [38;5;241m=[39m [43mpd[49m[38;5;241;43m.[39;49m[43mread_csv[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43minflation.csv[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m      2[0m happiness_2020 [38;5;241m=[39m pd[38;5;241m.[39mread_csv([38;5;124m'[39m[38;5;124mhappiness_2020-def.csv[39m[38;5;124m'[39m)
+[1;32m      3[0m happiness_2022 [38;5;241m=[39m pd[38;5;241m.[39mread_csv([38;5;124m'[39m[38;5;124mhappiness_2022-def.csv[39m[38;5;124m'[39m)
 
-File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/core/indexing.py:1073[0m, in [0;36m_LocationIndexer.__getitem__[0;34m(self, key)[0m
-[1;32m   1070[0m axis [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39maxis [38;5;129;01mor[39;00m [38;5;241m0[39m
-[1;32m   1072[0m maybe_callable [38;5;241m=[39m com[38;5;241m.[39mapply_if_callable(key, [38;5;28mself[39m[38;5;241m.[39mobj)
-[0;32m-> 1073[0m [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_getitem_axis[49m[43m([49m[43mmaybe_callable[49m[43m,[49m[43m [49m[43maxis[49m[38;5;241;43m=[39;49m[43maxis[49m[43m)[49m
+File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/util/_decorators.py:211[0m, in [0;36mdeprecate_kwarg.<locals>._deprecate_kwarg.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    209[0m     [38;5;28;01melse[39;00m:
+[1;32m    210[0m         kwargs[new_arg_name] [38;5;241m=[39m new_arg_value
+[0;32m--> 211[0m [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
 
-File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/core/indexing.py:1625[0m, in [0;36m_iLocIndexer._getitem_axis[0;34m(self, key, axis)[0m
-[1;32m   1622[0m     [38;5;28;01mraise[39;00m [38;5;167;01mTypeError[39;00m([38;5;124m"[39m[38;5;124mCannot index by location index with a non-integer key[39m[38;5;124m"[39m)
-[1;32m   1624[0m [38;5;66;03m# validate the location[39;00m
-[0;32m-> 1625[0m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_validate_integer[49m[43m([49m[43mkey[49m[43m,[49m[43m [49m[43maxis[49m[43m)[49m
-[1;32m   1627[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39mobj[38;5;241m.[39m_ixs(key, axis[38;5;241m=[39maxis)
+File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/util/_decorators.py:331[0m, in [0;36mdeprecate_nonkeyword_arguments.<locals>.decorate.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    325[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(args) [38;5;241m>[39m num_allow_args:
+[1;32m    326[0m     warnings[38;5;241m.[39mwarn(
+[1;32m    327[0m         msg[38;5;241m.[39mformat(arguments[38;5;241m=[39m_format_argument_list(allow_args)),
+[1;32m    328[0m         [38;5;167;01mFutureWarning[39;00m,
+[1;32m    329[0m         stacklevel[38;5;241m=[39mfind_stack_level(),
+[1;32m    330[0m     )
+[0;32m--> 331[0m [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
 
-File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/core/indexing.py:1557[0m, in [0;36m_iLocIndexer._validate_integer[0;34m(self, key, axis)[0m
-[1;32m   1555[0m len_axis [38;5;241m=[39m [38;5;28mlen[39m([38;5;28mself[39m[38;5;241m.[39mobj[38;5;241m.[39m_get_axis(axis))
-[1;32m   1556[0m [38;5;28;01mif[39;00m key [38;5;241m>[39m[38;5;241m=[39m len_axis [38;5;129;01mor[39;00m key [38;5;241m<[39m [38;5;241m-[39mlen_axis:
-[0;32m-> 1557[0m     [38;5;28;01mraise[39;00m [38;5;167;01mIndexError[39;00m([38;5;124m"[39m[38;5;124msingle positional indexer is out-of-bounds[39m[38;5;124m"[39m)
+File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/io/parsers/readers.py:950[0m, in [0;36mread_csv[0;34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)[0m
+[1;32m    935[0m kwds_defaults [38;5;241m=[39m _refine_defaults_read(
+[1;32m    936[0m     dialect,
+[1;32m    937[0m     delimiter,
+[0;32m   (...)[0m
+[1;32m    946[0m     defaults[38;5;241m=[39m{[38;5;124m"[39m[38;5;124mdelimiter[39m[38;5;124m"[39m: [38;5;124m"[39m[38;5;124m,[39m[38;5;124m"[39m},
+[1;32m    947[0m )
+[1;32m    948[0m kwds[38;5;241m.[39mupdate(kwds_defaults)
+[0;32m--> 950[0m [38;5;28;01mreturn[39;00m [43m_read[49m[43m([49m[43mfilepath_or_buffer[49m[43m,[49m[43m [49m[43mkwds[49m[43m)[49m
 
-[0;31mIndexError[0m: single positional indexer is out-of-bounds
-IndexError: single positional indexer is out-of-bounds
+File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/io/parsers/readers.py:605[0m, in [0;36m_read[0;34m(filepath_or_buffer, kwds)[0m
+[1;32m    602[0m _validate_names(kwds[38;5;241m.[39mget([38;5;124m"[39m[38;5;124mnames[39m[38;5;124m"[39m, [38;5;28;01mNone[39;00m))
+[1;32m    604[0m [38;5;66;03m# Create the parser.[39;00m
+[0;32m--> 605[0m parser [38;5;241m=[39m [43mTextFileReader[49m[43m([49m[43mfilepath_or_buffer[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwds[49m[43m)[49m
+[1;32m    607[0m [38;5;28;01mif[39;00m chunksize [38;5;129;01mor[39;00m iterator:
+[1;32m    608[0m     [38;5;28;01mreturn[39;00m parser
+
+File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/io/parsers/readers.py:1442[0m, in [0;36mTextFileReader.__init__[0;34m(self, f, engine, **kwds)[0m
+[1;32m   1439[0m     [38;5;28mself[39m[38;5;241m.[39moptions[[38;5;124m"[39m[38;5;124mhas_index_names[39m[38;5;124m"[39m] [38;5;241m=[39m kwds[[38;5;124m"[39m[38;5;124mhas_index_names[39m[38;5;124m"[39m]
+[1;32m   1441[0m [38;5;28mself[39m[38;5;241m.[39mhandles: IOHandles [38;5;241m|[39m [38;5;28;01mNone[39;00m [38;5;241m=[39m [38;5;28;01mNone[39;00m
+[0;32m-> 1442[0m [38;5;28mself[39m[38;5;241m.[39m_engine [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_make_engine[49m[43m([49m[43mf[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mengine[49m[43m)[49m
+
+File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/io/parsers/readers.py:1735[0m, in [0;36mTextFileReader._make_engine[0;34m(self, f, engine)[0m
+[1;32m   1733[0m     [38;5;28;01mif[39;00m [38;5;124m"[39m[38;5;124mb[39m[38;5;124m"[39m [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m mode:
+[1;32m   1734[0m         mode [38;5;241m+[39m[38;5;241m=[39m [38;5;124m"[39m[38;5;124mb[39m[38;5;124m"[39m
+[0;32m-> 1735[0m [38;5;28mself[39m[38;5;241m.[39mhandles [38;5;241m=[39m [43mget_handle[49m[43m([49m
+[1;32m   1736[0m [43m    [49m[43mf[49m[43m,[49m
+[1;32m   1737[0m [43m    [49m[43mmode[49m[43m,[49m
+[1;32m   1738[0m [43m    [49m[43mencoding[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43moptions[49m[38;5;241;43m.[39;49m[43mget[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mencoding[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m)[49m[43m,[49m
+[1;32m   1739[0m [43m    [49m[43mcompression[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43moptions[49m[38;5;241;43m.[39;49m[43mget[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mcompression[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m)[49m[43m,[49m
+[1;32m   1740[0m [43m    [49m[43mmemory_map[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43moptions[49m[38;5;241;43m.[39;49m[43mget[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mmemory_map[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;28;43;01mFalse[39;49;00m[43m)[49m[43m,[49m
+[1;32m   1741[0m [43m    [49m[43mis_text[49m[38;5;241;43m=[39;49m[43mis_text[49m[43m,[49m
+[1;32m   1742[0m [43m    [49m[43merrors[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43moptions[49m[38;5;241;43m.[39;49m[43mget[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mencoding_errors[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mstrict[39;49m[38;5;124;43m"[39;49m[43m)[49m[43m,[49m
+[1;32m   1743[0m [43m    [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43moptions[49m[38;5;241;43m.[39;49m[43mget[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mstorage_options[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m)[49m[43m,[49m
+[1;32m   1744[0m [43m[49m[43m)[49m
+[1;32m   1745[0m [38;5;28;01massert[39;00m [38;5;28mself[39m[38;5;241m.[39mhandles [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m
+[1;32m   1746[0m f [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mhandles[38;5;241m.[39mhandle
+
+File [0;32m~/anaconda3/lib/python3.10/site-packages/pandas/io/common.py:856[0m, in [0;36mget_handle[0;34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)[0m
+[1;32m    851[0m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(handle, [38;5;28mstr[39m):
+[1;32m    852[0m     [38;5;66;03m# Check whether the filename is to be opened in binary mode.[39;00m
+[1;32m    853[0m     [38;5;66;03m# Binary mode does not support 'encoding' and 'newline'.[39;00m
+[1;32m    854[0m     [38;5;28;01mif[39;00m ioargs[38;5;241m.[39mencoding [38;5;129;01mand[39;00m [38;5;124m"[39m[38;5;124mb[39m[38;5;124m"[39m [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m ioargs[38;5;241m.[39mmode:
+[1;32m    855[0m         [38;5;66;03m# Encoding[39;00m
+[0;32m--> 856[0m         handle [38;5;241m=[39m [38;5;28;43mopen[39;49m[43m([49m
+[1;32m    857[0m [43m            [49m[43mhandle[49m[43m,[49m
+[1;32m    858[0m [43m            [49m[43mioargs[49m[38;5;241;43m.[39;49m[43mmode[49m[43m,[49m
+[1;32m    859[0m [43m            [49m[43mencoding[49m[38;5;241;43m=[39;49m[43mioargs[49m[38;5;241;43m.[39;49m[43mencoding[49m[43m,[49m
+[1;32m    860[0m [43m            [49m[43merrors[49m[38;5;241;43m=[39;49m[43merrors[49m[43m,[49m
+[1;32m    861[0m [43m            [49m[43mnewline[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43m"[39;49m[43m,[49m
+[1;32m    862[0m [43m        [49m[43m)[49m
+[1;32m    863[0m     [38;5;28;01melse[39;00m:
+[1;32m    864[0m         [38;5;66;03m# Binary mode[39;00m
+[1;32m    865[0m         handle [38;5;241m=[39m [38;5;28mopen[39m(handle, ioargs[38;5;241m.[39mmode)
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'inflation.csv'
+FileNotFoundError: [Errno 2] No such file or directory: 'inflation.csv'
 
